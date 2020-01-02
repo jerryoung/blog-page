@@ -108,19 +108,19 @@
 
 
 
-  <meta name="description" content="String 概括 string 名词，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
+  <meta name="description" content="String 概括 string 名次，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
 <meta name="keywords" content="Java,Java基础,hash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="String of Java">
 <meta property="og:url" content="https://jaryoung.com/2019/08/25/String-of-Java/index.html">
 <meta property="og:site_name" content="全栈工程师之路">
-<meta property="og:description" content="String 概括 string 名词，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
+<meta property="og:description" content="String 概括 string 名次，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png">
-<meta property="og:updated_time" content="2019-08-29T03:27:47.814Z">
+<meta property="og:updated_time" content="2020-01-02T15:15:32.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String of Java">
-<meta name="twitter:description" content="String 概括 string 名词，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
+<meta name="twitter:description" content="String 概括 string 名次，意思可以翻译为：线，弦，细绳；一串，一行等  再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。这里有两个关键的field：value和hash。 String 三连击String变量到底存储在哪里？（JDK8)1234public class StringDemo &amp;#123;    publi">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png">
 
 
@@ -412,7 +412,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-29 11:27:47" itemprop="dateModified" datetime="2019-08-29T11:27:47+08:00">2019-08-29</time>
+                <time title="修改时间：2020-01-02 23:15:32" itemprop="dateModified" datetime="2020-01-02T23:15:32+08:00">2020-01-02</time>
               
             
           </span>
@@ -468,7 +468,7 @@
 
       
         <h2 id="String-概括"><a href="#String-概括" class="headerlink" title="String 概括"></a>String 概括</h2><blockquote>
-<p>string 名词，意思可以翻译为：线，弦，细绳；一串，一行等</p>
+<p>string 名次，意思可以翻译为：线，弦，细绳；一串，一行等</p>
 </blockquote>
 <p>再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。<br><a href="https://imgchr.com/i/mgkwsH" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png" alt="mgkwsH.md.png"></a><br>这里有两个关键的field：value和hash。</p>
 <h2 id="String-三连击"><a href="#String-三连击" class="headerlink" title="String 三连击"></a>String 三连击</h2><h3 id="String变量到底存储在哪里？（JDK8"><a href="#String变量到底存储在哪里？（JDK8" class="headerlink" title="String变量到底存储在哪里？（JDK8)"></a>String变量到底存储在哪里？（JDK8)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">            String hello = <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -588,6 +588,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/01/02/Study-English-One-Day/" rel="prev" title="Study English One Day">
+                Study English One Day <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -665,7 +669,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -688,7 +692,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -791,7 +797,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
