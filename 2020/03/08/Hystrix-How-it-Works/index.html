@@ -108,13 +108,13 @@
 
 
 
-  <meta name="description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况：  以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct(">
+  <meta name="description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况： 以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct()">
 <meta name="keywords" content="Hystrix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hystrix 是如何工作？（翻译）">
 <meta property="og:url" content="https://jaryoung.com/2020/03/08/Hystrix-How-it-Works/index.html">
 <meta property="og:site_name" content="全栈工程师之路">
-<meta property="og:description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况：  以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct(">
+<meta property="og:description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况： 以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct()">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2020/03/08/3zdwSU.png">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583859175204&di=1633e5307bcabc79aed491ca0edf1c50&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fwh%3D450%2C600%2Fsign%3Da148305f7af40ad115b1cfe7621c3de9%2Fb7fd5266d0160924002ba57cd50735fae6cd344e.jpg">
@@ -128,10 +128,10 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/20/82RCtS.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/22/8ICSXT.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/20/82TSJ0.png">
-<meta property="og:updated_time" content="2020-03-22T09:53:51.320Z">
+<meta property="og:updated_time" content="2020-03-22T09:58:54.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hystrix 是如何工作？（翻译）">
-<meta name="twitter:description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况：  以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct(">
+<meta name="twitter:description" content="原文链接  Hystrix-流程图下图显示了通过Hystrix向服务依赖项请求时发生的情况： 以下各节将更详细地说明此流程： 1.构造一个HystrixCommand或HystrixObservableCommand对象 2.执行Command 3.响应是否缓存 4.电路是否已经开路 5.线程池/队列/信号量是否已经满 6.HystrixObservableCommand.construct()">
 <meta name="twitter:image" content="https://s2.ax1x.com/2020/03/08/3zdwSU.png">
 
 
@@ -423,7 +423,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-03-22 17:53:51" itemprop="dateModified" datetime="2020-03-22T17:53:51+08:00">2020-03-22</time>
+                <time title="修改时间：2020-03-22 17:58:54" itemprop="dateModified" datetime="2020-03-22T17:58:54+08:00">2020-03-22</time>
               
             
           </span>
@@ -481,8 +481,7 @@
         <blockquote>
 <p><a href="https://github.com/Netflix/Hystrix/wiki/How-it-Works" target="_blank" rel="noopener">原文链接</a></p>
 </blockquote>
-<h2 id="Hystrix-流程图"><a href="#Hystrix-流程图" class="headerlink" title="Hystrix-流程图"></a>Hystrix-流程图</h2><p>下图显示了通过Hystrix向服务依赖项请求时发生的情况：</p>
-<p><img src="https://s2.ax1x.com/2020/03/08/3zdwSU.png" alt="3zdwSU.png"></p>
+<h2 id="Hystrix-流程图"><a href="#Hystrix-流程图" class="headerlink" title="Hystrix-流程图"></a>Hystrix-流程图</h2><p>下图显示了通过Hystrix向服务依赖项请求时发生的情况：<br><img src="https://s2.ax1x.com/2020/03/08/3zdwSU.png" alt="3zdwSU.png"></p>
 <p>以下各节将更详细地说明此流程：</p>
 <p><a href="#1.构造一个HystrixCommand或HystrixObservableCommand对象">1.构造一个HystrixCommand或HystrixObservableCommand对象</a></p>
 <p><a href="#2.执行Command">2.执行Command</a></p>
